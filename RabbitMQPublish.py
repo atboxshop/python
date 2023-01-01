@@ -1,7 +1,7 @@
 # Need install RabbitMQ before using this code
 import pika
 credentials = pika.PlainCredentials('user1', 'user')
-server = "atlaptop"
+server = "192.168.31.30"
 connection = pika.BlockingConnection(pika.ConnectionParameters(host = server,virtual_host = 'testvhost',credentials = credentials))
 channel = connection.channel()
 #channel.queue_declare(queue='Hello Wolrd')
