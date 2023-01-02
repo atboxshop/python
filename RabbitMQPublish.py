@@ -2,7 +2,7 @@
 import pika
 credentials = pika.PlainCredentials('user1', 'user')
 server = "192.168.31.30"
-connection = pika.BlockingConnection(pika.ConnectionParameters(host = server,port = 15672,virtual_host = 'testvhost',credentials = credentials))
+connection = pika.BlockingConnection(pika.ConnectionParameters(host = server,virtual_host = 'testvhost',credentials = credentials))
 channel = connection.channel()
 #channel.queue_declare(queue='Hello Wolrd')
 for i in range(5000):

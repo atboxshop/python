@@ -2,7 +2,7 @@
 import pika
 msgs = []
 credentials = pika.PlainCredentials('user1', 'user')
-connection = pika.BlockingConnection(pika.ConnectionParameters(host='atlaptop',virtual_host='testvhost',credentials=credentials))
+connection = pika.BlockingConnection(pika.ConnectionParameters(host='192.168.31.30',virtual_host='testvhost',credentials=credentials))
 chl = connection.channel()
 #queue = chl.queue_declare(queue="Hello World",passive= True, durable=True,auto_delete = False)
 while True:
